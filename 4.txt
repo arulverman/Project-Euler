@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string.h>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	// your code goes here
+long long int product;
+long long int max_prod=0;
+string p,h;
+int comp;
+for(long int i=100;i<=999;i++)
+{
+	for(long int j=100;j<=999;j++)
+	{
+		product = i*j;
+		h=to_string(product);
+		p=to_string(product);
+		reverse(p.begin(),p.end());
+		
+		if(h==p)
+		{
+			if(max_prod<=product)
+			{
+				max_prod = product;
+			}
+			else
+		{
+			continue;
+		}
+		}
+		
+		
+		
+	}
+	
+	
+}
+cout<<max_prod<<endl;
+	return 0;
+}
