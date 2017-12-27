@@ -19,15 +19,14 @@ int main() {
 
 for(long int i=3;i<=n;i=i+2)
 {
-//	cout<<"SQRT(N)="<<sqrt(n)<<endl;
+	
 	while(n%i==0)
 	{
 		v.push_back(i);
-		//cout<<i<<endl;
+	
 		n = n / i;
 	}
 	
-//	cout<<"I= "<<i<<endl;
 }
 
 if(v.empty())
