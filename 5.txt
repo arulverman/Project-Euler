@@ -1,0 +1,53 @@
+/* 
+
+Finding LCM with the help of Euclidean GCD algorithm within range 1 to 20
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+
+
+	long long int gcd(long long int a,long long int b){
+		// computes the GCD from 1 to 10 which is 1
+		if(a==0)
+		{
+			return b;
+			
+		}
+		
+		return gcd(b%a,a);
+	}
+	
+	
+	
+		long long int lcm(long long int a,long long int b)
+	{
+		
+		// we know that LCM = a*b / gcd (a,b);
+		return (a*b/gcd(a,b));
+	}
+	
+
+
+int main() {
+
+	long long int gcd_ans;
+	long long int result=1;
+	
+	
+	for (int i=2;i<=20;i++)
+	{
+
+	  result = lcm(result,i);
+	 
+                 
+	}
+
+cout<<result;
+	
+	
+	return 0;
+}
